@@ -2,7 +2,7 @@
   <h2>Quick Actions</h2>
 
   <div class="actions">
-    <button *ngFor="let action of actions" (click)="doAction(action.label)">
+    <button *ngFor="let action of actions">
       {{ action.label }}
     </button>
   </div>

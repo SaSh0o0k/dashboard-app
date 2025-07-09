@@ -15,8 +15,4 @@ export class QuickActions {
     { label: 'Risks Models'},
     { label: 'Documents Upload'}
   ];
-
-  doAction(label: string) {
-    alert(`Action: ${label}`);
-  }
 }
