@@ -1,0 +1,9 @@
+<section class="quick-actions">
+  <h2>Quick Actions</h2>
+
+  <div class="actions">
+    <button *ngFor="let action of actions" (click)="doAction(action.label)">
+      {{ action.label }}
+    </button>
+  </div>
+</section>

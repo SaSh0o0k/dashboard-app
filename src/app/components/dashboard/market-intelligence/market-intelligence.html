@@ -1,0 +1,11 @@
+<section class="market-intelligence">
+  <h2>Market Intelligence</h2>
+
+  <div class="news-list">
+    <div class="news-item" *ngFor="let item of news">
+      <h3>{{ item.title }}</h3>
+      <div class="date">{{ item.date }}</div>
+      <p>{{ item.summary }}</p>
+    </div>
+  </div>
+</section>

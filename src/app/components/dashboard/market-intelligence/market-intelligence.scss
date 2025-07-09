@@ -1,0 +1,32 @@
+.market-intelligence {
+  padding: 16px;
+
+  .news-list {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+
+    .news-item {
+      padding: 12px;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+      background: #f9f9f9;
+
+      h3 {
+        margin: 0;
+        font-size: 16px;
+      }
+
+      .date {
+        font-size: 12px;
+        color: #666;
+        margin: 4px 0;
+      }
+
+      p {
+        margin: 0;
+        font-size: 14px;
+      }
+    }
+  }
+}

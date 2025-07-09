@@ -1,0 +1,11 @@
+:host {
+  display: block;
+  background-color: #111520;
+}
+
+.content {
+  padding: 14px 100px 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}

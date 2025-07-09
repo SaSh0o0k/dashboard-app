@@ -1,0 +1,61 @@
+<section class="work-queue">
+  <div class="header">
+    <h2>Work Queue</h2>
+    <div class="tabs">
+      <button
+        *ngFor="let tab of tabs"
+        [class.active]="tab.key === selectedTab"
+        (click)="selectedTab = tab.key"
+        class="tab"
+      >
+        {{ tab.label }} ({{ tab.count }})
+      </button>
+    </div>
+  </div>
+
+  <div class="table-container">
+    <table>
+      <thead>
+        <tr>
+          <th>ORIGINATOR</th>
+          <th>CLIENT/LINE</th>
+          <th>TYPE</th>
+          <th>STATUS</th>
+          <th>CREATED</th>
+          <th></th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let row of filteredRows">
+          <td>
+            <div class="person">
+              <div class="avatar">{{ getInitials(row.originator) }}</div>
+              <div class="name">{{ row.originator }}</div>
+            </div>
+          </td>
+          <td>
+            <div class="client">
+              <div class="name">{{ row.client }}</div>
+              <div class="sub">{{ row.line }}</div>
+            </div>
+          </td>
+          <td>{{ row.type }}</td>
+          <td>
+            <span class="status"
+              [ngClass]="{
+                new: row.status === 'New',
+                pending: row.status === 'Pending Review',
+                completed: row.status === 'Completed'
+              }"
+              >
+                <span class="dot"></span>
+                {{ row.status }}</span
+            >
+          </td>
+          <td class="date">{{ row.date }}</td>
+          <td><div class="icon">⋮</div></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</section>

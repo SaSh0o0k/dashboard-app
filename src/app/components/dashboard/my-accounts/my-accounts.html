@@ -1,0 +1,22 @@
+<section class="my-accounts">
+  <h2>My Accounts</h2>
+
+  <input type="text" [(ngModel)]="filter" placeholder="Search accounts..." />
+
+  <table>
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Status</th>
+        <th>Tier</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let acc of filteredAccounts">
+        <td>{{ acc.name }}</td>
+        <td [ngClass]="acc.status.toLowerCase()">{{ acc.status }}</td>
+        <td>{{ acc.tier }}</td>
+      </tr>
+    </tbody>
+  </table>
+</section>

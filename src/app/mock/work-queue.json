@@ -1,0 +1,65 @@
+[
+  {
+    "originator": "Sam Masters",
+    "client": "NAMEX Tech Solutions",
+    "line": "Cyber Liability",
+    "type": "Underwriter Referral",
+    "status": "New",
+    "date": "04/16/2025",
+    "tab": "Assigned"
+  },
+  {
+    "originator": "Annalise Willis",
+    "client": "Maritime Logistics Corp",
+    "line": "Marine Cargo",
+    "type": "Underwriter Referral",
+    "status": "New",
+    "date": "04/20/2025",
+    "tab": "Assigned"
+  },
+  {
+    "originator": "Patruck Devenport",
+    "client": "Global Trade Solutions",
+    "line": "Marine Cargo",
+    "type": "Underwriter Referral",
+    "status": "Pending Review",
+    "date": "04/21/2025",
+    "tab": "Pending"
+  },
+  {
+    "originator": "Ana Killian",
+    "client": "NorthStar Financial Group",
+    "line": "D&O Liability",
+    "type": "Underwriter Referral",
+    "status": "Pending Review",
+    "date": "04/22/2025",
+    "tab": "Pending"
+  },
+  {
+    "originator": "Liam Chen",
+    "client": "Tech Innovators Inc.",
+    "line": "Cyber Liability",
+    "type": "Underwriter Referral",
+    "status": "Pending Review",
+    "date": "04/23/2025",
+    "tab": "Pending"
+  },
+  {
+    "originator": "Olivia Patel",
+    "client": "Global Trade Solutions",
+    "line": "Marine Cargo",
+    "type": "Underwriter Referral",
+    "status": "New",
+    "date": "04/24/2025",
+    "tab": "Referrals"
+  },
+  {
+    "originator": "Ethan Brooks",
+    "client": "SecureTech Systems",
+    "line": "Cyber Liability",
+    "type": "Underwriter Referral",
+    "status": "New",
+    "date": "04/25/2025",
+    "tab": "Referrals"
+  }
+]
