@@ -1,10 +1,11 @@
 .work-queue {
   background: var(--background-color);
   border-radius: 18px;
+  width: 100%;
   max-width: 1035px;
   padding: 20px;
   color: var(--text-color);
-  border: 1px solid #313b54;
+  border: 1px solid var(--border-color);
 
   .header {
     display: flex;
@@ -28,9 +29,8 @@
         cursor: pointer;
 
         &.active {
-          background: #2970ff;
+          background: var(--blue-color);
           color: #fff;
-          border-color: #2970ff;
         }
       }
     }
@@ -107,15 +107,15 @@
             }
 
             &.new .dot {
-              background: #3b82f6;
+              background: var(--green-color);
             }
 
             &.pending .dot {
-              background: #fbbf24;
+              background: var(--yellow-color);
             }
 
             &.completed .dot {
-              background: #10b981;
+              background: var(--red-color);
             }
           }
 

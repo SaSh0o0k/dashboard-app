@@ -1,66 +1,53 @@
 <section class="portfolio-goals">
   <h2>Portfolio goals</h2>
 
-  <div class="goal">
-    <div class="label-group">
-      <div class="label">PORTFOLIO LOSS RATIO TARGET</div>
-      <div class="target">TG: 55%</div>
+  <div class="goal-bar" *ngFor="let goal of goals; let i = index">
+    <div class="label">{{ goal.name }}</div>
+
+    <div class="bar-container">
+      <div class="tg" [style.left.%]="goal.target">
+        <div class="target">TG: {{ goal.target }}% </div>
+        <div class="triangle"></div>
+      </div>
+      <div class="bar">
+        <div class="segment green" [style.width.%]="getRangeWidth(goal, 0)"></div>
+        <div class="segment yellow" [style.width.%]="getRangeWidth(goal, 1)"></div>
+        <div class="segment red" [style.width.%]="getRangeWidth(goal, 2)"></div>
+      </div>
+      <div class="marker" [style.left.%]="goal.value">
+        <div class="value">{{ goal.value }}%</div>
+        <div class="triangle" [ngClass]="getStatusClass(goal)"></div>
+        <div class="status" [ngClass]="getStatusClass(goal)">
+          {{ getStatusText(goal) }}
+        </div>
+      </div>
     </div>
 
-    <div class="bar loss-ratio">
-      <div class="segment green" style="width: 50%"></div>
-      <div class="segment yellow" style="width: 20%"></div>
-      <div class="segment red" style="width: 30%"></div>
-      <div class="arrow blue" style="left: 48%"></div>
-    </div>
-
-    <div class="indicator-group">
-      <div class="delta good">-6.8% (GOOD)</div>
-      <div class="arrow green-up" style="left: 48.2%"></div>
-    </div>
-  </div>
-
-  <div class="goal">
-    <div class="label-group">
-      <div class="label">RENEWAL RETENTION</div>
-      <div class="target">TG: 85-90%</div>
-    </div>
-
-    <div class="bar renewal">
-      <div class="segment red" style="width: 10%"></div>
-      <div class="segment green" style="width: 88%"></div>
-      <div class="segment yellow" style="width: 2%"></div>
-    </div>
-
-    <div class="indicator-group">
-      <div class="center-label green">88%</div>
-      <div class="arrow green-up" style="left: 88%"></div>
-      <div class="sub green">ON TARGET</div>
-    </div>
+    
   </div>
 
   <div class="goal target-bar">
     <div class="label">NEW BUSINESS TARGET</div>
-    <div class="bar">
-      <div class="fill blue" style="width: 67%">
-        <span class="value">$8.1M</span>
+    <div class="bar-container">
+      <div class="bar">
+        <div class="fill blue" [style.width.%]="newBusinessTarget">
+          <div class="value">$8.1M</div>
+          <div class="percentage">{{ newBusinessTarget }}%</div>
+        </div>
       </div>
-    </div>
-    <div class="footer">
-      <div class="percentage">67%</div>
       <div class="target">$12M</div>
     </div>
   </div>
 
   <div class="goal target-bar">
     <div class="label">ANNUAL GWP TARGET</div>
-    <div class="bar">
-      <div class="fill blue" style="width: 68%">
-        <span class="value">$28.4M</span>
+    <div class="bar-container">
+      <div class="bar">
+        <div class="fill blue" [style.width.%]="annualGwpTarget">
+          <div class="value">$28.4M</div>
+          <div class="percentage">{{ annualGwpTarget }}%</div>
+        </div>
       </div>
-    </div>
-    <div class="footer">
-      <div class="percentage">68%</div>
       <div class="target">$42M</div>
     </div>
   </div>

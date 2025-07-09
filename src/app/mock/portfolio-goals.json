@@ -1,0 +1,14 @@
+[
+  {
+    "name": "PORTFOLIO LOSS RATIO TARGET",
+    "value": 48.2,
+    "target": 55,
+    "ranges": [50, 60]
+  },
+  {
+    "name": "RENEWAL RETENTION",
+    "value": 88,
+    "target": 85,
+    "ranges": [85, 90]
+  }
+]
