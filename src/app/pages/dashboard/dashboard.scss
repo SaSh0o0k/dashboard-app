@@ -1,0 +1,23 @@
+.dashboard {
+  display: flex;
+  flex-direction: column;
+
+  .dashboard-top-section {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 18px;
+
+    .dashboard-top-section-right {
+      display: flex;
+      flex-direction: row;
+      gap: 20px;
+
+      .dashboard-top-section-right-split {
+        display: flex;
+        flex-direction: column;
+        gap: 14px;
+      }
+    }
+  }
+}

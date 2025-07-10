@@ -22,33 +22,20 @@
         </div>
       </div>
     </div>
-
-    
   </div>
 
-  <div class="goal target-bar">
-    <div class="label">NEW BUSINESS TARGET</div>
+  <div class="goal target-bar" *ngFor="let target of targets">
+    <div class="label">{{ target.label }}</div>
     <div class="bar-container">
       <div class="bar">
-        <div class="fill blue" [style.width.%]="newBusinessTarget">
-          <div class="value">$8.1M</div>
-          <div class="percentage">{{ newBusinessTarget }}%</div>
+        <div
+          class="fill blue"
+          [style.width.%]="getPercentage(target)">
+          <div class="value">${{ target.value }}{{ target.unit }}</div>
+          <div class="percentage">{{ getPercentage(target) }}%</div>
         </div>
       </div>
-      <div class="target">$12M</div>
-    </div>
-  </div>
-
-  <div class="goal target-bar">
-    <div class="label">ANNUAL GWP TARGET</div>
-    <div class="bar-container">
-      <div class="bar">
-        <div class="fill blue" [style.width.%]="annualGwpTarget">
-          <div class="value">$28.4M</div>
-          <div class="percentage">{{ annualGwpTarget }}%</div>
-        </div>
-      </div>
-      <div class="target">$42M</div>
+      <div class="target">${{ target.target }}{{ target.unit }}</div>
     </div>
   </div>
 </section>

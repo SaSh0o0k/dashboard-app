@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import data from '../../../mock/portfolio-goals.json';
+import targets from '../../../mock/portfolio-targets.json';
 
 @Component({
   selector: 'app-portfolio-goals',
@@ -11,6 +12,7 @@ import data from '../../../mock/portfolio-goals.json';
 })
 export class PortfolioGoals {
   goals = data;
+  targets = targets;
   newBusinessTarget = 47;
   annualGwpTarget = 68;
   
@@ -33,5 +35,9 @@ export class PortfolioGoals {
     if (goal.value < min) return 'GOOD';
     if (goal.value <= max) return 'MEDIUM';
     return 'BAD';
+  }
+
+  getPercentage(targets: any): number {
+    return Math.round((targets.value / targets.target) * 100);
   }
 }

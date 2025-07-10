@@ -1,18 +1,19 @@
 .quick-actions {
   background: var(--background-color, #1a1f2e);
-  border-radius: 18px;
+  border-radius: 24px;
   width: 100%;
   max-width: 285px;
+  min-height: 264px;
   padding: 20px;
   border: 1px solid var(--border-color);
   display: flex;
   flex-direction: column;
-  gap: 24px;
+  gap: 18px;
   color: var(--text-color);
 
   h2 {
-    font-size: 18px;
-    color: var(--text-color, #ffffff);
+    font-size: 26px;
+    color: var(--text-color);
   }
 
   .actions {

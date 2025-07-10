@@ -1,0 +1,14 @@
+[
+  {
+    "label": "NEW BUSINESS TARGET",
+    "value": 8.1,
+    "target": 12,
+    "unit": "M"
+  },
+  {
+    "label": "ANNUAL GWP TARGET",
+    "value": 28.4,
+    "target": 42,
+    "unit": "M"
+  }
+]
