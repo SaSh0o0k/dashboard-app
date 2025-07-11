@@ -1,9 +1,9 @@
 .market-intelligence {
   background: var(--background-color, #1a1f2e);
-  border-radius: 24px;
+  border-radius: 20px;
   width: 100%;
   max-width: 285px;
-  min-height: 272px;
+  // min-height: 272px;
   padding: 20px;
   border: 1px solid var(--border-color);
   display: flex;
@@ -12,7 +12,7 @@
   color: var(--text-color);
 
   h2 {
-    font-size: 26px;
+    font-size: 20px;
     color: var(--text-color);
   }
 
@@ -21,9 +21,8 @@
 
     li {
       display: flex;
-      height: 56px;
       gap: 9px;
-      padding: 8px 0;
+      padding: 8px 10px 8px 0px;
       border-bottom: 1px solid var(--shadow-border-color);
       overflow: hidden;
 
@@ -47,7 +46,7 @@
       }
 
       .text {
-        font-size: 16px;
+        font-size: 12px;
         color: #e5e7eb;
       }
     }

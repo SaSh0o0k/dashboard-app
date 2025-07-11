@@ -1,10 +1,7 @@
-:host {
-  display: block;
-  background-color: #111520;
-}
-
 .content {
-  padding: 14px 125px 20px;
+  background: linear-gradient(0deg, #171c2b 0%, #111520 20%);
+  min-width: 780px;
+  padding: 14px 100px 20px;
   display: flex;
   flex-direction: column;
   gap: 6px;

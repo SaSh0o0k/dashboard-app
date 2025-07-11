@@ -1,22 +1,83 @@
 <section class="my-accounts">
-  <h2>My Accounts</h2>
+  <div class="header-row">
+    <h2>My accounts</h2>
+    <div class="actions">
+      <input type="text" placeholder="Search" class="search" />
+      <button class="btn">Filter</button>
+      <button class="btn">Sort</button>
+      <button class="btn">Group</button>
+      <button class="btn btn-primary">+ New</button>
+    </div>
+  </div>
 
-  <input type="text" [(ngModel)]="filter" placeholder="Search accounts..." />
-
-  <table>
-    <thead>
-      <tr>
-        <th>Name</th>
-        <th>Status</th>
-        <th>Tier</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr *ngFor="let acc of filteredAccounts">
-        <td>{{ acc.name }}</td>
-        <td [ngClass]="acc.status.toLowerCase()">{{ acc.status }}</td>
-        <td>{{ acc.tier }}</td>
-      </tr>
-    </tbody>
-  </table>
+  <div class="table-scroll">
+    <table>
+      <colgroup>
+        <col style="width: 17%;">
+        <col style="width: 12%;">
+        <col style="width: 12%;">
+        <col style="width: 5%;">
+        <col style="width: 3%;">
+        <col style="width: 8%;">
+        <col style="width: 3%;">
+        <col style="width: 3%;">
+        <col style="width: 6%;">
+        <col style="width: 2%;">
+        <col style="width: 12%;">
+        <col style="width: 4%;">
+      </colgroup>
+      <thead>
+        <tr>
+          <th>ACCOUNT NAME/TYPE</th>
+          <th>LINE</th>
+          <th>BROKER</th>
+          <th>RENEWAL DATE</th>
+          <th>PREMIUM</th>
+          <th>RATED PREMIUM</th>
+          <th>LOSS RATIO</th>
+          <th>APPETITE</th>
+          <th>STATUS</th>
+          <th>TRIAGE</th>
+          <th>WINNABILITY</th>
+          <th></th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let row of rows">
+          <td>
+            <div class="main-text">{{ row.name }}</div>
+            <div class="sub-text">{{ row.type }}</div>
+          </td>
+          <td>{{ row.line }}</td>
+          <td>{{ row.broker }}</td>
+          <td>{{ row.date }}</td>
+          <td class="premium right">${{ row.premium }}</td>
+          <td class="right">${{ row.ratedPremium }}</td>
+          <td class="center"><span class="loss" [ngClass]="getLossColor(row.loss)">{{ row.loss }}%</span></td>
+          <td><span class="appetite" [ngClass]="row.appetite.toLowerCase()">{{ row.appetite }}</span></td>
+          <td class="status"
+              [ngClass]="{
+                active: row.status === 'Active',
+                under: row.status === 'Under review'
+              }"
+              >
+                <span class="dot"></span>
+                {{ row.status }}</td>
+          <td>
+            <div class="triage">{{ row.triage }}</div>
+          </td>
+          <td>
+            <div class="winnability">
+              <div class="dots">
+                <span *ngFor="let i of getWinnabilityDots(row.winnability)" class="dot filled"></span>
+                <span *ngFor="let i of getEmptyDots(row.winnability)" class="dot"></span>
+              </div>
+              <div class="sub-text">{{ row.winnabilityLabel }}</div>
+            </div>
+          </td>
+          <td><div class="icon">⋮</div></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
 </section>

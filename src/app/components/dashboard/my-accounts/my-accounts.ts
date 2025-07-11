@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
+import rows from '../../../mock/my-accounts.json';
 
 @Component({
   selector: 'app-my-accounts',
@@ -10,15 +11,19 @@ import { FormsModule } from '@angular/forms';
   styleUrl: './my-accounts.scss',
 })
 export class MyAccounts {
-  filter = '';
-  accounts = [
-    { name: 'Account A', status: 'Active', tier: 'Gold' },
-    { name: 'Account B', status: 'Inactive', tier: 'Silver' },
-    { name: 'Account C', status: 'Pending', tier: 'Bronze' },
-  ];
+  rows = rows;
 
-  get filteredAccounts() {
-    const f = this.filter.trim().toLowerCase();
-    return this.accounts.filter(acc => acc.name.toLowerCase().includes(f));
+  getLossColor(loss: number): string {
+    if (loss >= 66) return 'red';
+    if (loss >= 33) return 'yellow';
+    return 'green';
+  }
+
+  getWinnabilityDots(level: number): number[] {
+    return Array(level).fill(0);
+  }
+
+  getEmptyDots(level: number): number[] {
+    return Array(4 - level).fill(0);
   }
 }

@@ -14,56 +14,58 @@
   </div>
 
   <div class="table-container">
-    <table>
-      <colgroup>
-        <col style="width: 30%;">
-        <col style="width: 20%;">
-        <col style="width: 20%;">
-        <col style="width: 10%;">
-        <col style="width: 15%;">
-        <col style="width: 5%;">
-      </colgroup>
-      <thead>
-        <tr>
-          <th>ORIGINATOR</th>
-          <th>CLIENT/LINE</th>
-          <th>TYPE</th>
-          <th>STATUS</th>
-          <th>CREATED</th>
-          <th></th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr *ngFor="let row of filteredRows">
-          <td>
-            <div class="person">
-              <div class="avatar">{{ getInitials(row.originator) }}</div>
-              <div class="name">{{ row.originator }}</div>
-            </div>
-          </td>
-          <td>
-            <div class="client">
-              <div class="name">{{ row.client }}</div>
-              <div class="sub">{{ row.line }}</div>
-            </div>
-          </td>
-          <td>{{ row.type }}</td>
-          <td>
-            <span class="status"
-              [ngClass]="{
-                new: row.status === 'New',
-                pending: row.status === 'Pending Review',
-                completed: row.status === 'Completed'
-              }"
+    <div class="table-scroll">
+      <table>
+        <colgroup>
+          <col style="width: 20%;">
+          <col style="width: 20%;">
+          <col style="width: 20%;">
+          <col style="width: 13%;">
+          <col style="width: 8%;">
+          <col style="width: 6%;">
+        </colgroup>
+        <thead>
+          <tr>
+            <th>ORIGINATOR</th>
+            <th>CLIENT/LINE</th>
+            <th>TYPE</th>
+            <th>STATUS</th>
+            <th>CREATED</th>
+            <th></th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let row of filteredRows">
+            <td>
+              <div class="person">
+                <div class="avatar">{{ getInitials(row.originator) }}</div>
+                <div class="name">{{ row.originator }}</div>
+              </div>
+            </td>
+            <td>
+              <div class="client">
+                <div class="name">{{ row.client }}</div>
+                <div class="sub">{{ row.line }}</div>
+              </div>
+            </td>
+            <td>{{ row.type }}</td>
+            <td>
+              <span class="status"
+                [ngClass]="{
+                  new: row.status === 'New',
+                  pending: row.status === 'Pending Review',
+                  completed: row.status === 'Completed'
+                }"
+                >
+                  <span class="dot"></span>
+                  {{ row.status }}</span
               >
-                <span class="dot"></span>
-                {{ row.status }}</span
-            >
-          </td>
-          <td class="date">{{ row.date }}</td>
-          <td><div class="icon">⋮</div></td>
-        </tr>
-      </tbody>
-    </table>
+            </td>
+            <td class="date">{{ row.date }}</td>
+            <td><div class="icon">⋮</div></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
   </div>
 </section>

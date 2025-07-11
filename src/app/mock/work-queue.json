@@ -18,6 +18,43 @@
     "tab": "Assigned"
   },
   {
+    "originator": "Derek Shaw",
+    "client": "Oceanic Freight Co.",
+    "line": "Marine Cargo",
+    "type": "Loss Control Request",
+    "status": "Pending Review",
+    "date": "04/26/2025",
+    "tab": "Assigned"
+  },
+  {
+    "originator": "Grace Kim",
+    "client": "FinSecure Ltd.",
+    "line": "D&O Liability",
+    "type": "Underwriter Referral",
+    "status": "New",
+    "date": "04/27/2025",
+    "tab": "Assigned"
+  },
+  {
+    "originator": "Martin Ellis",
+    "client": "Quantum Cyber Defense",
+    "line": "Cyber Liability",
+    "type": "Email",
+    "status": "New",
+    "date": "04/28/2025",
+    "tab": "Assigned"
+  },
+  {
+    "originator": "Sam Masters",
+    "client": "NAMEX Tech Solutions",
+    "line": "Cyber Liability",
+    "type": "Email",
+    "status": "Completed",
+    "date": "04/16/2025",
+    "tab": "Assigned"
+  },
+
+  {
     "originator": "Patruck Devenport",
     "client": "Global Trade Solutions",
     "line": "Marine Cargo",
@@ -45,6 +82,43 @@
     "tab": "Pending"
   },
   {
+    "originator": "Carla Mendez",
+    "client": "SkyLogistics Ltd.",
+    "line": "Marine Cargo",
+    "type": "Underwriter Referral",
+    "status": "Pending Review",
+    "date": "04/29/2025",
+    "tab": "Pending"
+  },
+  {
+    "originator": "Noah Ramirez",
+    "client": "AlphaData Security",
+    "line": "Cyber Liability",
+    "type": "Underwriter Referral",
+    "status": "Pending Review",
+    "date": "04/30/2025",
+    "tab": "Pending"
+  },
+    {
+    "originator": "Patruck Devenport",
+    "client": "Global Trade Solutions",
+    "line": "Marine Cargo",
+    "type": "Underwriter Referral",
+    "status": "Pending Review",
+    "date": "04/21/2025",
+    "tab": "Pending"
+  },
+    {
+    "originator": "Patruck Devenport",
+    "client": "Global Trade Solutions",
+    "line": "Marine Cargo",
+    "type": "Underwriter Referral",
+    "status": "Pending Review",
+    "date": "04/21/2025",
+    "tab": "Pending"
+  },
+
+  {
     "originator": "Olivia Patel",
     "client": "Global Trade Solutions",
     "line": "Marine Cargo",
@@ -60,6 +134,33 @@
     "type": "Underwriter Referral",
     "status": "New",
     "date": "04/25/2025",
+    "tab": "Referrals"
+  },
+  {
+    "originator": "Nina O’Connor",
+    "client": "NextGen Logistics",
+    "line": "Marine Cargo",
+    "type": "Underwriter Referral",
+    "status": "New",
+    "date": "05/01/2025",
+    "tab": "Referrals"
+  },
+  {
+    "originator": "James Monroe",
+    "client": "ShieldWall Financial",
+    "line": "D&O Liability",
+    "type": "Underwriter Referral",
+    "status": "New",
+    "date": "05/02/2025",
+    "tab": "Referrals"
+  },
+  {
+    "originator": "Sophia Nguyen",
+    "client": "DataCloud Services",
+    "line": "Cyber Liability",
+    "type": "Underwriter Referral",
+    "status": "New",
+    "date": "05/03/2025",
     "tab": "Referrals"
   }
 ]
