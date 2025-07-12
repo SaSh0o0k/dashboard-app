@@ -20,7 +20,7 @@
   padding: 0;
   border: 0;
   box-sizing: border-box;
-  font-family: sans-serif;
+      font-family: Poppins, Arial, Helvetica, sans-serif;
   font-weight: 100;
 }
 
@@ -98,7 +98,7 @@ input[type="submit"] {
 }
 
 input:focus,
-input:active,
+input:active, 
 button:focus,
 button:active {
   outline: none;

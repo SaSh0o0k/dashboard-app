@@ -1,1 +1,25 @@
-<p>navbar works!</p>
+<div class="navbar">
+  <div class="nav-scroll-wrapper">
+    <div class="nav-items" #scrollContainer>
+      <a *ngFor="let item of navItems"
+         [routerLink]="item.path"
+         routerLinkActive="active"
+         [routerLinkActiveOptions]="{ exact: true }"
+         class="nav-item">
+        <img
+          [src]="'..//assets/icons/' + item.icon + '.svg'"
+          class="icon"
+          alt="{{ item.label }}"
+        />
+        {{ item.label }}
+      </a>
+    </div>
+  </div>
+
+  <div class="nav-controls">
+    <button class="circle" (click)="scrollLeft()">
+      <img [src]="'..//assets/icons/arrow-left.svg'"/></button>
+    <button class="circle" (click)="scrollRight()">
+      <img [src]="'..//assets/icons/arrow-right.svg'"></button>
+  </div>
+</div>
