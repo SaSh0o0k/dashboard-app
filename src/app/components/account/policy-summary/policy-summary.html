@@ -1,1 +1,15 @@
-<p>policy-summary works!</p>
+<div class="policy-summary-wrapper">
+  <h4>Policies</h4>
+  <div class="policies" #policiesContainer>
+    <div class="policy-card" *ngFor="let policy of policies">
+      <div class="info">
+        <div class="icon-name">
+          <div class="icon">{{ policy.icon }}</div>
+          <div class="name">{{ policy.name }}</div>
+        </div>
+        <div class="premium">Premium: {{ policy.premium }}</div>
+        <div class="date">Eff.Date: {{ policy.effDate }}</div>
+      </div>
+    </div>
+  </div>
+</div>

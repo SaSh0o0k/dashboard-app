@@ -1,0 +1,45 @@
+[
+  {
+    "name": "Marine Cargo",
+    "icon": "🚢",
+    "premium": "$625,000",
+    "effDate": "6/30/2026"
+  },
+  {
+    "name": "General Liability",
+    "icon": "🛡️",
+    "premium": "$175,000",
+    "effDate": "6/30/2026"
+  },
+  {
+    "name": "Workers Comp",
+    "icon": "🛡️",
+    "premium": "$75,000",
+    "effDate": "---"
+  },
+  {
+    "name": "Property",
+    "icon": "🏢",
+    "premium": "$64,829.83",
+    "effDate": "---"
+  },
+  {
+    "name": "Umbrella",
+    "icon": "🌂",
+    "premium": "$275,000",
+    "effDate": "13/03/2026"
+  },
+  {
+    "name": "Cyber Liability",
+    "icon": "💻",
+    "premium": "$200,000",
+    "effDate": "28/03/2026"
+  },
+  {
+    "name": "Professional Liability",
+    "icon": "💼",
+    "premium": "$150,000",
+    "effDate": "15/04/2026"
+  }
+]
+

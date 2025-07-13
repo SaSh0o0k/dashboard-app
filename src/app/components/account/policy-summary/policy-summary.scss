@@ -1,0 +1,74 @@
+.policy-summary-wrapper {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  padding: 20px 0px;
+  color: var(--text-color);
+  gap: 12px;
+
+  h4 {
+    font-size: 28px;
+  }
+
+  .policies {
+    display: flex;
+    background: var(--background-color);
+    border: 1px solid var(--border-color);
+    border-radius: 20px;
+    padding: 16px 20px;
+    gap: 14px;
+    overflow-x: auto;
+    overflow-y: hidden;
+    scroll-behavior: smooth;
+    cursor: grab;
+
+    &::-webkit-scrollbar {
+      display: none;
+    }
+
+    &.grabbing {
+      cursor: grabbing;
+      user-select: none;
+    }
+
+    .policy-card {
+      display: flex;
+      align-items: center;
+      background-color: var(--light-background-color);
+      border-radius: 24px;
+      padding: 20px 78px 18px 20px;
+
+      .info {
+        display: flex;
+        flex-direction: column;
+        gap: 4px;
+
+        .icon-name {
+          display: flex;
+          flex-direction: row;
+          flex-wrap: nowrap;
+          align-items: center;
+          gap: 8px;
+
+          .icon {
+            // width: 20px;
+            // height: 20px;
+            font-size: 20px;
+          }
+          .name {
+            font-size: 18px;
+            margin-bottom: 6px;
+            white-space: nowrap;
+          }
+        }
+
+        .premium,
+        .date {
+          font-size: 14px;
+          color: #7a7b86;
+          white-space: nowrap;
+        }
+      }
+    }
+  }
+}
