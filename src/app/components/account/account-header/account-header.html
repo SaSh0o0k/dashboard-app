@@ -1,0 +1,30 @@
+<div class="account-header">
+  <div class="left">
+    <img class="logo" [src]="account.logo" alt="logo" />
+    <div class="info">
+      <h1 class="name">{{ account.name }}</h1>
+      <div class="details">
+        <div>{{ account.address }}</div>
+        <div><span>EXISTING ACCOUNT</span>{{ account.accountNumber }}</div>
+        <div><span>BROKER</span>{{ account.broker }}</div>
+        <div><span>UNDERWRITER</span>{{ account.underwriter }}</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="right">
+    <div class="title">
+      <img src="..//assets/icons/attention.svg" alt="!" />
+      Needs Attention
+    </div>
+    <ul>
+      <li *ngFor="let item of account.alerts">
+        <div class="text">
+          <div class="strong">{{ item.title }}</div>
+          <div class="subtle">{{ item.subtitle }}</div>
+          <a [href]="item.link" class="link">{{ item.linkText }} →</a>
+        </div>
+      </li>
+    </ul>
+  </div>
+</div>

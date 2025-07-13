@@ -1,0 +1,12 @@
+{
+  "winnability": "Very Strong",
+  "lossRatio": 25,
+  "lossRatioTarget": 42,
+  "premiumGrowth": 12.4,
+  "premiumYoY": "$123M vs $150M Target",
+  "exposure": [
+    { "label": "Marine Cargo", "value": 71.4 },
+    { "label": "General Liability", "value": 20 },
+    { "label": "Workers Comp", "value": 8.6 }
+  ]
+}

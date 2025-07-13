@@ -1,0 +1,20 @@
+.account-page {
+  display: flex;
+  flex-direction: column;
+  padding: 10px 100px 20px;
+
+  .breadcrumb {
+    font-size: 12px;
+    color: var(--text-color);
+
+    .highlight {
+      color: var(--blue-color);
+    }
+  }
+
+  .account-grid {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 16px;
+  }
+}
