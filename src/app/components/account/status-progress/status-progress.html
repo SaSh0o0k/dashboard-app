@@ -1,1 +1,26 @@
-<p>status-progress works!</p>
+<div class="status-progress">
+  <h4>Account Status</h4>
+  <div class="progress-bar">
+    <div
+      class="step"
+      *ngFor="let step of steps; let i = index"
+      [class.completed]="i < currentStepIndex"
+      [class.current]="i === currentStepIndex"
+    >
+      <div class="circle">
+        <ng-container *ngIf="i <= currentStepIndex; else emptyCircle">
+          <img src="..//assets/icons/check-green.svg" alt="✓" />
+        </ng-container>
+        <ng-template #emptyCircle>
+          <div class="empty-circle"></div>
+        </ng-template>
+      </div>
+      <div class="label">{{ step }}</div>
+      <div
+        class="line"
+        *ngIf="i < steps.length - 1"
+        [class.dotted]="i >= currentStepIndex"
+      ></div>
+    </div>
+  </div>
+</div>

@@ -1,1 +1,12 @@
-<p>compliance-docs works!</p>
+<div class="compliance-docs">
+  <div class="header">
+    <h4>Compliance & Documentation</h4>
+    <a href="#" class="link">See history →</a>
+  </div>
+  <div class="doc-list">
+    <div class="doc" *ngFor="let item of docs">
+      <img src="..//assets/icons/check-green.svg" alt="✓" />
+      <span>{{ item }}</span>
+    </div>
+  </div>
+</div>
