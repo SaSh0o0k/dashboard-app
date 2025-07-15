@@ -1,1 +1,117 @@
-<p>account-details works!</p>
+<div class="account-details-wrapper">
+  <h4>Account Details</h4>
+  <div class="account-details">
+    <aside class="sidebar">
+      <section class="section" [class.active]="hasActive(0)">
+        <h4>DECISION SUPPORT <span class="badge">4</span></h4>
+        <ul>
+          <li class="active">Winnability</li>
+          <li>Exposure Review & Suggested Coverage</li>
+          <li>Portfolio Strategy Alignment</li>
+          <li>Broker Analytics</li>
+        </ul>
+      </section>
+
+      <section class="section" [class.active]="hasActive(1)">
+        <h4>RISK ASSESSMENT <span class="badge">6</span></h4>
+      </section>
+
+      <section class="section" [class.active]="hasActive(2)">
+        <h4>DOCUMENTS AND COMPLIANCE <span class="badge">2</span></h4>
+      </section>
+    </aside>
+
+    <main class="content">
+      <h2>Winnability</h2>
+      <div class="metrics-container">
+        <div class="metric-card">
+          <p class="label">Overall Score</p>
+          <div class="score-wrapper">
+            <p class="value">{{ details.score }}%</p>
+            <div class="rating-outline-box">
+              <div class="dots-separator">
+                <span class="dot" *ngFor="let filled of getFilledDots(details.score)"
+                  [ngClass]="{ 'filled': filled }"></span>
+              </div>
+              <p class="score-rating">{{ getScoreRating(details.score) }}</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="metric-card">
+          <p class="label">Historical trend</p>
+          <div class="trend-chart-container">
+            <svg class="trend-svg" viewBox="0 0 100 40" preserveAspectRatio="none">
+              <path d="M 0 30 L 25 20 L 50 26 L 75 10 L 100 6" stroke="var(--blue-color)" stroke-width="2" fill="none"
+                vectorEffect="non-scaling-stroke" />
+            </svg>
+            <div class="chart-labels">
+              <span>Jan</span><span>Feb</span><span>Mar</span><span>Apr</span><span>Now</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="metric-card">
+          <p class="label">Position</p>
+          <div class="bar-container">
+            <div class="bar-wrapper" *ngFor="let item of positionData">
+              <div class="bar">
+                <div class="fill" [style.width.%]="item.value"></div>
+              </div>
+              <div class="text">{{ item.label }} {{ item.value }}%</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="bar-sections">
+        <div class="section-card">
+          <h3><img class="green" src="..//assets/icons/arrow-up.svg" /> Increasing Winnability</h3>
+          <div class="increasing-bar" *ngFor="let item of details.increasing; index as i">
+            <span class="index green">{{ i + 1 }}</span>
+            <div class="label-bar">
+              <span class="label">{{ item.label }}</span>
+              <div class="bar-percent">
+                <div class="bar-wrapper">
+                  <div class="bar green">
+                    <span [style.width.%]="getBarWidth(item.value)"></span>
+                    <div class="percent">{{ item.value }}%</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="section-card">
+          <h3><img class="yellow" src="..//assets/icons/arrow-down.svg" /> Decreasing Winnability</h3>
+          <div class="increasing-bar" *ngFor="let item of details.decreasing; index as i">
+            <span class="index yellow">{{ i + 1 }}</span>
+            <div class="label-bar">
+              <span class="label">{{ item.label }}</span>
+              <div class="bar-percent">
+                <div class="bar-wrapper">
+                  <div class="bar yellow">
+                    <span [style.width.%]="getBarWidth(item.value)"></span>
+                    <div class="percent">{{ item.value }}%</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="ai-recommendations">
+        <h3><img src="..//assets/icons/rocket.svg" /> AI-Powered Recommendations</h3>
+        <div class="recommendation" *ngFor="let rec of details.recommendations">
+          <div class="text">
+            <strong>{{ rec.title }}</strong>
+            <p>{{ rec.text }}</p>
+          </div>
+          <button class="apply-btn">Apply</button>
+        </div>
+      </div>
+    </main>
+  </div>
+</div>

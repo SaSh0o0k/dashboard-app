@@ -65,12 +65,12 @@
         left: 65%;
         width: 70%;
         height: 1px;
-        background: repeating-linear-gradient(to right, var(--green-color) 0 4px, transparent 2px 6px);
+        background: repeating-linear-gradient(to right, var(--green-color) 0, var(--green-color) 4px, transparent 4px, transparent 8px);
         z-index: 0;
       }
 
       .line.dotted {
-        background: repeating-linear-gradient(to right, #71717a 0 2px, transparent 2px 6px);
+        background: repeating-linear-gradient(to right, #71717a 0, #71717a 4px, transparent 4px, transparent 8px);
       }
     }
   }
