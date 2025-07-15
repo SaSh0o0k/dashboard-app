@@ -1,1 +1,89 @@
-<p>policies-table works!</p>
+<section class="policies-table">
+  <h4>Policies</h4>
+  <div class="policies-wrapper">
+    <div class="header-row">
+      <div class="actions">
+        <input type="text" placeholder="Search" class="search" />
+        <button class="btn">Filter</button>
+        <button class="btn">Group</button>
+      </div>
+    </div>
+
+    <div class="table-scroll">
+      <table>
+        <thead>
+          <tr>
+            <th>LINE</th>
+            <th>EFF. DATE</th>
+            <th>EXP. DATE</th>
+            <th>STATUS</th>
+            <th>EXPIRING TECH</th>
+            <th>EXPIRING PREMIUM</th>
+            <th>RENEWAL TO TECH</th>
+            <th>RENEWAL TECH</th>
+            <th>RENEWAL PREMIUM</th>
+            <th>RATE CHANGE</th>
+            <th>LOSS RATIO</th>
+            <th></th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let policy of policies">
+            <td>
+              <div class="main-text">
+                <img class="icon" [ngClass]="policy.iconClass" />
+                {{ policy.line }}
+              </div>
+              <div class="sub-text">{{ policy.id }}</div>
+            </td>
+            <td>{{ policy.effDate }}</td>
+            <td>{{ policy.expDate }}</td>
+            <td class="status">
+              <div class="status-content" [ngClass]="policy.status.toLowerCase()">
+                <span class="dot"></span>
+                {{ policy.status }}
+              </div>
+            </td>
+            <td>{{ policy.expiringTech | currency:'USD':'symbol':'1.0-0' }}</td>
+            <td>{{ policy.expiringPremium | currency:'USD':'symbol':'1.0-0' }}</td>
+            <td>{{ policy.renewalToTech | currency:'USD':'symbol':'1.0-0' }}</td>
+            <td>{{ policy.renewalTech | currency:'USD':'symbol':'1.0-0' }}</td>
+            <td><strong>{{ policy.renewalPremium | currency:'USD':'symbol':'1.0-0' }}</strong></td>
+            <td [ngClass]="{
+      'positive': isPositiveRateChange(policy.rateChange),
+      'negative': isNegativeRateChange(policy.rateChange)
+    }">
+              {{ policy.rateChange === null ? 'N/A' : (policy.rateChange | number:'1.1-1') + '%' }}
+            </td>
+            <td>
+              <span class="loss" [ngClass]="getLossClass(policy.lossRatio)">
+                {{ policy.lossRatio === null ? 'N/A' : policy.lossRatio + '%' }}
+              </span>
+            </td>
+            <td>
+              <div class="icon bottom">⋮</div>
+            </td>
+          </tr>
+        </tbody>
+
+        <tfoot>
+          <tr>
+            <td colspan="4" class="totals-label">TOTAL ({{ policies.length }})</td>
+            <td>{{ getTotal('expiringTech') | currency:'USD':'symbol':'1.0-0' }}</td>
+            <td>{{ getTotal('expiringPremium') | currency:'USD':'symbol':'1.0-0' }}</td>
+            <td>{{ getTotal('renewalToTech') | currency:'USD':'symbol':'1.0-0' }}</td>
+            <td>{{ getTotal('renewalTech') | currency:'USD':'symbol':'1.0-0' }}</td>
+            <td><strong>{{ getTotal('renewalPremium') | currency:'USD':'symbol':'1.0-0' }}</strong></td>
+            <td>{{ getAverage('rateChange') }}%</td>
+            <td>
+              <span class="loss" [ngClass]="getLossClass(+getAverage('lossRatio'))">
+                {{ getAverage('lossRatio') }}%
+              </span>
+            </td>
+            <td></td>
+          </tr>
+        </tfoot>
+      </table>
+    </div>
+  </div>
+</section>

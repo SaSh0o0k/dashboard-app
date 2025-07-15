@@ -21,7 +21,7 @@
         <col style="width: 8%;">
         <col style="width: 3%;">
         <col style="width: 3%;">
-        <col style="width: 6%;">
+        <col style="width: 9%;">
         <col style="width: 2%;">
         <col style="width: 12%;">
         <col style="width: 4%;">
@@ -55,14 +55,15 @@
           <td class="right">${{ row.ratedPremium }}</td>
           <td class="center"><span class="loss" [ngClass]="getLossColor(row.loss)">{{ row.loss }}%</span></td>
           <td><span class="appetite" [ngClass]="row.appetite.toLowerCase()">{{ row.appetite }}</span></td>
-          <td class="status"
-              [ngClass]="{
+          <td class="status">
+            <div class="status-content" [ngClass]="{
                 active: row.status === 'Active',
                 under: row.status === 'Under review'
-              }"
-              >
-                <span class="dot"></span>
-                {{ row.status }}</td>
+              }">
+              <span class="dot"></span>
+              {{ row.status }}
+            </div>
+          </td>
           <td>
             <div class="triage">{{ row.triage }}</div>
           </td>
@@ -75,7 +76,9 @@
               <div class="sub-text">{{ row.winnabilityLabel }}</div>
             </div>
           </td>
-          <td><div class="icon">⋮</div></td>
+          <td>
+            <div class="icon">⋮</div>
+          </td>
         </tr>
       </tbody>
     </table>
