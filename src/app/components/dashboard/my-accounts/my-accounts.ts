@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
-import rows from '../../../data/my-accounts.json';
+import rows from '../../../data/dashboard/my-accounts.json';
 
 @Component({
   selector: 'app-my-accounts',

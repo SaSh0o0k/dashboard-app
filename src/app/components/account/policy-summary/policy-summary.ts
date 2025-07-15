@@ -1,6 +1,6 @@
 import { Component, ElementRef, ViewChild, AfterViewInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import policies from '../../../data/policy-summary.json';
+import policies from '../../../data/account/policy-summary.json';
 
 @Component({
   selector: 'app-policy-summary',

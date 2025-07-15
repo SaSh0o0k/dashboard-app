@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import data from '../../../data/portfolio-goals.json';
-import targets from '../../../data/portfolio-targets.json';
+import data from '../../../data/dashboard/portfolio-goals.json';
+import targets from '../../../data/dashboard/portfolio-targets.json';
 
 @Component({
   selector: 'app-portfolio-goals',

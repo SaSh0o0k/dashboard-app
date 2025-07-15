@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import details from '../../../data/account-details.json';
+import details from '../../../data/account/account-details.json';
 
 @Component({
   selector: 'app-account-details',

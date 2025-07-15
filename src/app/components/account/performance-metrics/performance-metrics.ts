@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import metrics from '../../../data/performance-metrics.json';
+import metrics from '../../../data/account/performance-metrics.json';
 
 @Component({
   selector: 'app-performance-metrics',

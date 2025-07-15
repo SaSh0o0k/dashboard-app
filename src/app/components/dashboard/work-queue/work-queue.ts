@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import data from '../../../data/work-queue.json';
+import data from '../../../data/dashboard/work-queue.json';
 
 @Component({
   selector: 'app-work-queue',

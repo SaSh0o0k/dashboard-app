@@ -1,1 +1,31 @@
-<p>communication-panel works!</p>
+<div class="communication-panel">
+  <h4>Communication</h4>
+  <div class="communication-wrapper">
+    <div class="header">
+      <div class="actions">
+        <input type="text" placeholder="Search" class="search" />
+        <button class="btn">Filter</button>
+        <button class="btn">Group</button>
+      </div>
+    </div>
+
+    <div class="messages-grid">
+      <div class="message-card" *ngFor="let msg of messages" [class.responded]="msg.replied">
+        <div class="tag-title">
+          <div class="card-tag" *ngIf="msg.tag">{{ msg.tag }}</div>
+          <h3>{{ msg.title }}</h3>
+        </div>
+        <div class="meta">{{ msg.sender }} // {{ msg.date }}</div>
+        <p class="body">{{ msg.body }}</p>
+
+        <div class="footer">
+          <div class="attachments" *ngIf="msg.attachments > 0">
+            <img src="..//assets/icons/paper-clip.svg" />
+            {{ msg.attachments }} attachments
+          </div>
+          <button class="reply-btn" *ngIf="!msg.replied">Reply</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
