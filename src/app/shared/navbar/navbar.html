@@ -7,7 +7,7 @@
          [routerLinkActiveOptions]="{ exact: true }"
          class="nav-item">
         <img
-          [src]="'..//assets/icons/' + item.icon + '.svg'"
+          [src]="'../../../..//assets/icons/' + item.icon + '.svg'"
           class="icon"
           alt="{{ item.label }}"
         />
@@ -18,8 +18,8 @@
 
   <div class="nav-controls">
     <button class="circle" (click)="scrollLeft()">
-      <img [src]="'..//assets/icons/arrow-left.svg'"/></button>
+      <img [src]="'../../../..//assets/icons/arrow-left.svg'"/></button>
     <button class="circle" (click)="scrollRight()">
-      <img [src]="'..//assets/icons/arrow-right.svg'"></button>
+      <img [src]="'../../../..//assets/icons/arrow-right.svg'"></button>
   </div>
 </div>
